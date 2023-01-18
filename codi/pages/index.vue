@@ -1,16 +1,36 @@
 <template>
- <v-container>
-  <v-row>
-    <v-col cols="6">
-      <h1></h1>
-    </v-col>
-  </v-row>
-  
- </v-container>
+  <div>
+    <h1>Productes</h1>
+  </div>
 </template>
 
-<!-- <script> 
+<script> 
 export default {
-  name: 'IndexPage'
+data(){
+  return{
+    productes:null
+  }
+},
+mounted(){
+  this.descarregarProductes(
+    let self = this
+    this.$axios.get('https://dummyjson.com/docs/products?limit=2&')
+  )
+},
+methods:{
+  descarregarProductes(){
+    this.$axios.get('htpps://https://dummyjson.com/docs/products')
+    .then(
+
+      resposta=>{
+        console.log('resposta')
+      }
+    )
+  }
+},
+.catch{
+
 }
-</script> -->
+
+}
+</script>
